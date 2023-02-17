@@ -1,0 +1,32 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "img": "111111",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "price": 1200
+        }, 
+        {
+            "id": 2,
+            "img":"111111",          
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "price": 2200
+        }, 
+        {
+            "id": 3,
+            "img": "111111",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "price": 200
+        }, 
+        {
+            "id": 4,
+            "img": "111111",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "price": 3500
+        }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
