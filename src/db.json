@@ -1,32 +1,35 @@
 {
-    "posts": [
+    "product": [
         {
             "id": 1,
-            "img": "111111",
+            "img": "https://cdn.tgdd.vn/Products/Images/44/239552/Slider/vi-vn-apple-macbook-air-m1-2020-z124000de-8.jpg",
+            "title": "macbook",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1200
         }, 
         {
             "id": 2,
-            "img":"111111",          
+            "img":"https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-bac-thumb-200x200.jpg", 
+            "title": "Iphone 14",         
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 2200
         }, 
         {
             "id": 3,
-            "img": "111111",
+            "img": "https://cdn.tgdd.vn/Products/Images/522/269329/ipad-pro-m1-11-inch-wifi-cellular-1.jpg",
+            "title": "ipad",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 200
         }, 
         {
             "id": 4,
-            "img": "111111",
+            "img": "https://cdn.tgdd.vn/Products/Images/54/236016/bluetooth-airpods-2-apple-mv7n2-imei-3-org.jpg",
+            "title": "air pod",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 3500
         }
     ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+    "cart": [
+      { }
+    ]
   }
