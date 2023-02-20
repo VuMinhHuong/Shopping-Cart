@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Cart from '../components/Cart'
 import Product from '../components/Product'
 import "./Shopping.scss"
-// import Product from '../components/Product'
-// import logo from "/img/Logo-Rikkei.png"
-// import samsung from "../assets/img/samsung.png"
-// import pad from "../assets/img/ipad.png"
-// import iphone from "../assets/img/iphone.png"
-// import macbook from "../assets/img/macbook.png"
 
 const Shopping = () => {
+
+  const [products, setProducts] = useState([])
+
+  useEffect(()=>{
+    fetch('http://localhost:8000/product')
+    .then(res => res.json())
+    .then(data => {
+      setProducts(data)
+    })
+    .catch(err => console.log(err))
+  }, [])
+
   return (
     <div className='shopping'>
       <div className="logo"><img src="https://rikkei.edu.vn/wp-content/uploads/2022/04/Logo-Rikkei.png" alt="logo" /></div>
@@ -18,12 +25,18 @@ const Shopping = () => {
         <div className="list-product">
             <div className="list-product-title">List Products</div>
             <div className="list-product-product">
-                <Product/>
+              {products ? products.map(product => <Product data={product}/>) : "Loading..."}
             </div>
         </div>
 
         <div className="cart">
-        <div className="cart-product-title">Cart</div>
+          <div className="cart-product-title">Cart</div>
+          <div className="cart-products-table">
+            <Cart/>
+          </div>
+          <div className="cart-products-priceTotal">
+            There are 5 items in your cart with: 3000 USD
+          </div>
         </div>
       </div>
 
