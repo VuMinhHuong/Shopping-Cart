@@ -41,6 +41,92 @@
             }
             .cart-products-table {
                 width: 100%;
+                .cart-comp {
+                    width: 100%;
+                    Table {
+                        width: 100%;
+                        thead {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                .c-1 {
+                                    width: 5%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                }
+                                .c-2 {
+                                    width: 30%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                }
+                                .c-3 {
+                                    width: 10%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                }
+                                .c-4 {
+                                    width: 25%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                }
+                            }
+                        }
+                        tbody {
+                            width: 100%;
+                            tr {
+                                width: 100%;
+                                &:nth-child(odd) {
+                                    background-color: rgba($color: gray, $alpha: 0.4);
+                                }
+                                &:hover {
+                                    background-color: rgba($color: rgb(0, 255, 26), $alpha: 0.1);
+                                };
+                                .c-1 {
+                                    width: 5%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                    text-align: center;
+                                }
+                                .c-2 {
+                                    width: 30%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                }
+                                .c-3 {
+                                    width: 10%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                    text-align: center;
+                                }
+                                .c-4 {
+                                    width: 25%;
+                                    padding: 10px 0px;
+                                    border-bottom: 1px solid gray;
+                                    text-align: center;
+                                    height: 80%;
+                                    line-height: 80%;
+                                    button {
+                                        cursor: pointer;
+                                        margin: 0px 5px;
+                                        background-color: greenyellow;
+                                        border: none;
+                                        font-size: 16px;
+                                        border-radius: 10%;
+                                        &:hover {
+                                            background-color: rgb(207, 214, 196);
+                                        }
+                                        &:nth-child(2) {
+                                            background-color: red;
+                                            &:hover {
+                                                background-color: rgb(207, 214, 196);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -24,6 +24,7 @@ const Product = ({data}) => {
           id: Math.floor(Math.random()*1000),
           product_id: data.id,
           qty: qty,
+          ...data,
         }
         fetch('http://localhost:8000/cart', {
           method: 'POST',

@@ -1,94 +1,27 @@
 import React from 'react';
 import "./Cart.scss";
-import { Table } from 'react-bootstrap'
 
-const Cart = () => {
+const Cart = ({ data }) => {
+  console.log(data);
   return (
-    <div className='cart-comp'>
-
-    <Table striped bordered hover size="sm">
-      <thead>
-        <tr>
-          <th className='c-1'>#</th>
-          <th className='c-2'>Name</th>
-          <th className='c-3'>Price</th>
-          <th className='c-3'>Quantity</th>
-          <th className='c-3'>Subtotal</th>
-          <th className='c-4'>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td className='c-1'>1</td>
-          <td className='c-2'>Iphone 14 promax</td>
-          <td className='c-3'>12 USD</td>
-          <td className='c-3'>
-            2
-          </td>
-          <td className='c-3'>24 USD</td>
-          <td className='c-4'>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td className='c-1'>1</td>
-          <td className='c-2'>Iphone 14 promax</td>
-          <td className='c-3'>12 USD</td>
-          <td className='c-3'>
-            2
-          </td>
-          <td className='c-3'>24 USD</td>
-          <td className='c-4'>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <td className='c-1'>1</td>
-          <td className='c-2'>Iphone 14 promax</td>
-          <td className='c-3'>12 USD</td>
-          <td className='c-3'>
-            2
-          </td>
-          <td className='c-3'>24 USD</td>
-          <td className='c-4'>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <td className='c-1'>1</td>
-          <td className='c-2'>Iphone 14 promax</td>
-          <td className='c-3'>12 USD</td>
-          <td className='c-3'>
-            2
-          </td>
-          <td className='c-3'>24 USD</td>
-          <td className='c-4'>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <td className='c-1'>1</td>
-          <td className='c-2'>Iphone 14 promax</td>
-          <td className='c-3'>12 USD</td>
-          <td className='c-3'>
-            2
-          </td>
-          <td className='c-3'>24 USD</td>
-          <td className='c-4'>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-
-      </tbody>
-    </Table>
-
-    </div>
+    <>
+      {
+        data.length === 0 ? <tr> <td colSpan={2} style={{"color":"red", "fontWeight":500, "margin": "20px auto"}}>Your cart is empty!</td></tr>: data.map((e, index) => 
+                (<tr key={index}>
+                  <td className='c-1'>{index + 1}</td>
+                  <td className='c-2'>{e.title}</td>
+                  <td className='c-3'>{e.price} USD</td>
+                  <td className='c-3'>
+                  {e.qty}
+                  </td>
+                  <td className='c-3'>{e.price * e.qty} USD</td>
+                  <td className='c-4'>
+                    <button>Update</button>
+                    <button>Delete</button>
+                  </td>
+                </tr>))
+      }
+    </>
   )
 }
 
